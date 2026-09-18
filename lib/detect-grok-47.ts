@@ -111,7 +111,8 @@ async function detectFromXai(apiKey: string): Promise<GrokStatus> {
   }
 
   if (byId.status === 401 || byId.status === 403) {
-    throw new Error("xAI API key rejected");
+    console.error("xAI API key rejected; falling back to docs");
+    return detectFromDocs();
   }
 
   throw new Error(`xAI catalogue: HTTP ${byId.status}`);
