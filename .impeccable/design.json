@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-18T09:26:00.000Z",
+  "title": "Design System: Grok 4.7 enamel plate",
+  "extensions": {
+    "colorMeta": {
+      "enamel-idle": {
+        "role": "primary",
+        "displayName": "Brunswick Vitreous",
+        "canonical": "#163328",
+        "tonalRamp": [
+          "oklch(15.0% 0.041 166.7)",
+          "oklch(26.4% 0.041 166.7)",
+          "oklch(37.9% 0.041 166.7)",
+          "oklch(49.3% 0.041 166.7)",
+          "oklch(60.7% 0.041 166.7)",
+          "oklch(72.1% 0.041 166.7)",
+          "oklch(83.6% 0.041 166.7)",
+          "oklch(95.0% 0.041 166.7)"
+        ]
+      },
+      "enamel-live": {
+        "role": "secondary",
+        "displayName": "Inhabited Vermilion",
+        "canonical": "#c4452d",
+        "tonalRamp": [
+          "oklch(15.0% 0.167 32.8)",
+          "oklch(26.4% 0.167 32.8)",
+          "oklch(37.9% 0.167 32.8)",
+          "oklch(49.3% 0.167 32.8)",
+          "oklch(60.7% 0.167 32.8)",
+          "oklch(72.1% 0.167 32.8)",
+          "oklch(83.6% 0.167 32.8)",
+          "oklch(95.0% 0.167 32.8)"
+        ]
+      },
+      "enamel-bone": {
+        "role": "neutral",
+        "displayName": "Fired Bone",
+        "canonical": "#f3ead4",
+        "tonalRamp": [
+          "oklch(15.0% 0.031 88.4)",
+          "oklch(26.4% 0.031 88.4)",
+          "oklch(37.9% 0.031 88.4)",
+          "oklch(49.3% 0.031 88.4)",
+          "oklch(60.7% 0.031 88.4)",
+          "oklch(72.1% 0.031 88.4)",
+          "oklch(83.6% 0.031 88.4)",
+          "oklch(95.0% 0.031 88.4)"
+        ]
+      },
+      "enamel-bone-live": {
+        "role": "neutral",
+        "displayName": "Live Bone",
+        "canonical": "#f8efe0",
+        "tonalRamp": [
+          "oklch(15.0% 0.022 80.7)",
+          "oklch(26.4% 0.022 80.7)",
+          "oklch(37.9% 0.022 80.7)",
+          "oklch(49.3% 0.022 80.7)",
+          "oklch(60.7% 0.022 80.7)",
+          "oklch(72.1% 0.022 80.7)",
+          "oklch(83.6% 0.022 80.7)",
+          "oklch(95.0% 0.022 80.7)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Answer stamp",
+        "purpose": "OUI / NON / — only. Uppercase condensed grotesk occupying most of the plate. Below 640px use clamp(5.2rem, 32vw, 8.5rem)."
+      },
+      "title": {
+        "displayName": "Machine stamp",
+        "purpose": "Named subject directly under the answer (Grok 4.7). Same family, opened tracking. Not a kicker."
+      },
+      "body": {
+        "displayName": "Check line",
+        "purpose": "Bottom-edge caption: relative check time or catalogue failure. Public Sans 500, max 28ch."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "enamel-flood",
+        "value": "700ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Live enamel raster fades in over the idle raster."
+      },
+      {
+        "name": "rivet-breathe",
+        "value": "1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite",
+        "purpose": "Top-right rivet only, while polling: scale 1→1.12 and brightness 1→1.35."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "plate-compact",
+        "value": "640px",
+        "purpose": "Tightens the answer-word clamp only. Layout stays a full-bleed plate."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Status plate idle",
+      "kind": "card",
+      "refersTo": "status-plate",
+      "description": "Full-bleed Brunswick enamel lid at rest, bone stamp, four corner rivets.",
+      "html": "<section class=\"ds-plate\" tabindex=\"0\"><span class=\"ds-rivet ds-rivet-tl\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><span class=\"ds-rivet ds-rivet-tr\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><span class=\"ds-rivet ds-rivet-bl\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><span class=\"ds-rivet ds-rivet-br\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><div class=\"ds-stamp\"><p class=\"ds-word\">NON</p><p class=\"ds-machine\">Grok 4.7</p></div><p class=\"ds-check\">Vérifié à l’instant</p></section>",
+      "css": ".ds-plate { position: relative; isolation: isolate; overflow: hidden; min-height: 28rem; display: grid; grid-template-rows: 1fr auto; align-items: center; justify-items: center; padding: clamp(1.75rem, 5vw, 3.5rem); background: var(--enamel-idle, #163328); color: var(--enamel-bone, #f3ead4); border-radius: 0; } .ds-plate:focus-visible { outline: 2px solid var(--enamel-bone, #f3ead4); outline-offset: 4px; } .ds-stamp { position: relative; z-index: 1; display: grid; justify-items: center; text-align: center; } .ds-word { margin: 0; font-family: var(--font-display), \"Arial Narrow\", sans-serif; font-weight: 800; font-size: clamp(4.5rem, 18vw, 8rem); line-height: 0.78; letter-spacing: -0.04em; text-transform: uppercase; } .ds-machine { margin: 0.35rem 0 0; font-family: var(--font-display), \"Arial Narrow\", sans-serif; font-weight: 700; font-size: clamp(1.05rem, 2.4vw, 1.45rem); letter-spacing: 0.18em; text-transform: uppercase; } .ds-check { position: relative; z-index: 1; margin: 0; max-width: 28ch; text-align: center; font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; color: color-mix(in srgb, var(--enamel-bone, #f3ead4) 94%, var(--enamel-idle, #163328)); } .ds-rivet { position: absolute; z-index: 2; width: clamp(1.7rem, 3.2vw, 2.4rem); height: clamp(1.7rem, 3.2vw, 2.4rem); pointer-events: none; } .ds-rivet svg { display: block; width: 100%; height: 100%; } .ds-rivet-tl { top: clamp(0.85rem, 3vw, 1.8rem); left: clamp(0.85rem, 3vw, 1.8rem); } .ds-rivet-tr { top: clamp(0.85rem, 3vw, 1.8rem); right: clamp(0.85rem, 3vw, 1.8rem); } .ds-rivet-bl { bottom: clamp(0.85rem, 3vw, 1.8rem); left: clamp(0.85rem, 3vw, 1.8rem); } .ds-rivet-br { bottom: clamp(0.85rem, 3vw, 1.8rem); right: clamp(0.85rem, 3vw, 1.8rem); }"
+    },
+    {
+      "name": "Status plate live",
+      "kind": "card",
+      "refersTo": "status-plate-live",
+      "description": "Inhabited vermilion field; same stamp family in live bone; top-right rivet may breathe while polling.",
+      "html": "<section class=\"ds-plate ds-plate-live\" tabindex=\"0\"><span class=\"ds-rivet ds-rivet-tl\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><span class=\"ds-rivet ds-rivet-tr ds-rivet-live\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><span class=\"ds-rivet ds-rivet-bl\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><span class=\"ds-rivet ds-rivet-br\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span><div class=\"ds-stamp\"><p class=\"ds-word\">OUI</p><p class=\"ds-machine\">Grok 4.7</p></div><p class=\"ds-check\">Vérifié à l’instant</p></section>",
+      "css": ".ds-plate { position: relative; isolation: isolate; overflow: hidden; min-height: 28rem; display: grid; grid-template-rows: 1fr auto; align-items: center; justify-items: center; padding: clamp(1.75rem, 5vw, 3.5rem); background: var(--enamel-idle, #163328); color: var(--enamel-bone, #f3ead4); border-radius: 0; } .ds-plate-live { background: var(--enamel-live, #c4452d); color: var(--enamel-bone-live, #f8efe0); } .ds-plate:focus-visible { outline: 2px solid var(--enamel-bone, #f3ead4); outline-offset: 4px; } .ds-stamp { position: relative; z-index: 1; display: grid; justify-items: center; text-align: center; } .ds-word { margin: 0; font-family: var(--font-display), \"Arial Narrow\", sans-serif; font-weight: 800; font-size: clamp(4.5rem, 18vw, 8rem); line-height: 0.78; letter-spacing: -0.04em; text-transform: uppercase; } .ds-machine { margin: 0.35rem 0 0; font-family: var(--font-display), \"Arial Narrow\", sans-serif; font-weight: 700; font-size: clamp(1.05rem, 2.4vw, 1.45rem); letter-spacing: 0.18em; text-transform: uppercase; } .ds-check { position: relative; z-index: 1; margin: 0; max-width: 28ch; text-align: center; font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; color: color-mix(in srgb, var(--enamel-bone-live, #f8efe0) 90%, var(--enamel-live, #c4452d)); } .ds-rivet { position: absolute; z-index: 2; width: clamp(1.7rem, 3.2vw, 2.4rem); height: clamp(1.7rem, 3.2vw, 2.4rem); pointer-events: none; } .ds-rivet svg { display: block; width: 100%; height: 100%; } .ds-rivet-tl { top: clamp(0.85rem, 3vw, 1.8rem); left: clamp(0.85rem, 3vw, 1.8rem); } .ds-rivet-tr { top: clamp(0.85rem, 3vw, 1.8rem); right: clamp(0.85rem, 3vw, 1.8rem); } .ds-rivet-bl { bottom: clamp(0.85rem, 3vw, 1.8rem); left: clamp(0.85rem, 3vw, 1.8rem); } .ds-rivet-br { bottom: clamp(0.85rem, 3vw, 1.8rem); right: clamp(0.85rem, 3vw, 1.8rem); } .ds-rivet-live { animation: ds-breathe 1.6s cubic-bezier(0.16, 1, 0.3, 1) infinite; } @keyframes ds-breathe { 0%, 100% { transform: scale(1); filter: brightness(1); } 50% { transform: scale(1.12); filter: brightness(1.35); } }"
+    },
+    {
+      "name": "Answer word",
+      "kind": "custom",
+      "refersTo": "answer-word",
+      "description": "The only display type: OUI, NON, or an em dash while unknown.",
+      "html": "<p class=\"ds-word\">NON</p>",
+      "css": ".ds-word { margin: 0; color: var(--enamel-bone, #f3ead4); font-family: var(--font-display), \"Arial Narrow\", sans-serif; font-weight: 800; font-size: clamp(4.5rem, 18vw, 8rem); line-height: 0.78; letter-spacing: -0.04em; text-transform: uppercase; } .ds-word:hover { letter-spacing: -0.045em; } .ds-word:focus-visible { outline: 2px solid var(--enamel-bone, #f3ead4); outline-offset: 4px; }"
+    },
+    {
+      "name": "Machine stamp",
+      "kind": "custom",
+      "refersTo": "machine-stamp",
+      "description": "Named subject under the answer. Same condensed family, opened tracking — not a kicker.",
+      "html": "<p class=\"ds-machine\">Grok 4.7</p>",
+      "css": ".ds-machine { margin: 0.35rem 0 0; color: var(--enamel-bone, #f3ead4); font-family: var(--font-display), \"Arial Narrow\", sans-serif; font-weight: 700; font-size: clamp(1.05rem, 2.4vw, 1.45rem); letter-spacing: 0.18em; text-transform: uppercase; } .ds-machine:hover { letter-spacing: 0.2em; } .ds-machine:focus-visible { outline: 2px solid var(--enamel-bone, #f3ead4); outline-offset: 4px; }"
+    },
+    {
+      "name": "Check line",
+      "kind": "custom",
+      "refersTo": "check-line",
+      "description": "Bottom-edge Public Sans caption for relative time or catalogue failure.",
+      "html": "<p class=\"ds-check\">Vérifié à l’instant</p>",
+      "css": ".ds-check { margin: 0; max-width: 28ch; text-align: center; font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; font-size: 0.95rem; font-weight: 500; letter-spacing: 0.02em; color: color-mix(in srgb, var(--enamel-bone, #f3ead4) 94%, var(--enamel-idle, #163328)); } .ds-check:hover { color: var(--enamel-bone, #f3ead4); } .ds-check:focus-visible { outline: 2px solid var(--enamel-bone, #f3ead4); outline-offset: 4px; }"
+    },
+    {
+      "name": "Corner rivet",
+      "kind": "custom",
+      "refersTo": "status-plate",
+      "description": "Pewter dome clipped to a disc. Static at rest; breathe only on the polling rivet.",
+      "html": "<span class=\"ds-rivet\" aria-hidden=\"true\"><svg viewBox=\"0 0 64 64\"><circle cx=\"32\" cy=\"32\" r=\"30\" fill=\"#6d675c\"/><circle cx=\"32\" cy=\"32\" r=\"24\" fill=\"#c4bbb0\"/><circle cx=\"32\" cy=\"32\" r=\"11\" fill=\"#7a7368\"/><circle cx=\"26\" cy=\"24\" r=\"7\" fill=\"#e8e0d4\" opacity=\"0.45\"/></svg></span>",
+      "css": ".ds-rivet { display: inline-block; width: 2.4rem; height: 2.4rem; } .ds-rivet svg { display: block; width: 100%; height: 100%; } .ds-rivet:hover { transform: scale(1.06); filter: brightness(1.15); } .ds-rivet:focus-visible { outline: 2px solid var(--enamel-bone, #f3ead4); outline-offset: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Riveted Factory Enamel Plate",
+    "overview": "The viewport is not a page with a status widget. It is a single cold-fired factory plate, edge to edge, as if the browser chrome were the lip of a machine enclosure. Idle, the body is Brunswick vitreous enamel — dark, pitted, with a soft overhead bloom in the photograph. When Grok 4.7 is on the catalogue the same plate inhabits: the field floods vermilion, the bone lettering stays, the rivets stay. Hue is the enamel body, not a traffic light.\n\nDensity is extreme and empty. One stamp (OUI, NON, or an em dash while unknown) occupies most of the glass. Directly under it, the machine name. At the bottom edge, a quiet check line. Four photographic rivets pin the corners. There is no card, no nav, no CTA, no metric chrome. Motion is material: a 700ms enamel flood, and while the catalogue is being polled, a single rivet breathes.\n\nConfirmed rejections: hero-metric dashboards, cards, glow on the word, CSS-only flat fills as the field, traffic-light green/red as available/unavailable, labels above the answer, stencil display, glyph rivets.",
+    "keyCharacteristics": [
+      "Full-bleed photographic enamel, not a contained panel",
+      "Two fired bodies only: Brunswick idle and vermilion inhabited",
+      "Bone condensed grotesk stamped into the plate (Big Shoulders 800 / 700)",
+      "Four corner rivets as cropped metal photographs",
+      "Depth from the rasters; no box-shadow vocabulary",
+      "Square plate, circular rivets, nothing in between"
+    ],
+    "rules": [
+      {
+        "name": "The Material Not Signal Rule",
+        "body": "Brunswick and vermilion are fired enamel states. OUI / NON is the mark; hue is the plate’s body. Never recode green as go or red as fail.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Fires Rule",
+        "body": "Only two plate bodies exist. Loading, unknown, and catalogue-unreachable keep the current firing and speak through the stamp and the check line — they do not introduce a third field color.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Stamp Rule",
+        "body": "Only the answer word may occupy display size. If a second large word appears, the plate has failed.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Eyebrow Rule",
+        "body": "Nothing sits above the answer. The machine line is the named subject under the stamp, never a category kicker, never a status pill.",
+        "section": "typography"
+      },
+      {
+        "name": "The Viewport Is the Plate Rule",
+        "body": "No surrounding chrome, no safe-area card, no split pane. New surfaces that belong to this world are also full-bleed plates, not pages that contain a plate.",
+        "section": "layout"
+      },
+      {
+        "name": "The Photograph Carries Depth Rule",
+        "body": "If a surface needs thickness, use the enamel or rivet raster. Do not invent a shadow scale to stand in for glass.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Four Rivets Rule",
+        "body": "Every full-bleed plate carries four circular rivets, one per corner. While the catalogue is polled, exactly one rivet (top-right) breathes — scale 1 → 1.12 and brightness 1 → 1.35 over 1.6s. The other three stay still.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do fill the viewport with the enamel photograph (idle or live raster) and stamp the answer in Big Shoulders 800.",
+      "Do keep four photographic rivets at the corners and let exactly one breathe during a poll.",
+      "Do crossfade the live field at 700ms with cubic-bezier(0.16, 1, 0.3, 1).",
+      "Do put the machine name under the word and the check time at the bottom edge, nothing above the stamp.",
+      "Do keep last-known enamel and stamp when the catalogue fails; say the failure in the check line."
+    ],
+    "donts": [
+      "Don't recode Brunswick/vermilion as success/fail, or add a third field color for error or loading.",
+      "Don't place a kicker, eyebrow, or label above the answer word.",
+      "Don't introduce cards, dashboards, nav, buttons, or marketing CTAs.",
+      "Don't glow the word, drop offset shadows, or replace the photographs with CSS grain/glaze.",
+      "Don't use glyph icons or geometric CSS circles as rivets, or stencil / system display as the stamp face."
+    ]
+  }
+}
